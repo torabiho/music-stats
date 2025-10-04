@@ -3,6 +3,9 @@ from sqlalchemy.orm import sessionmaker
 import redis.asyncio as aioredis
 from .config import settings
 
+# this file configures and exposes async connections to 
+# both Postgres and Redis for use throughout the app
+
 # Postgres (async)
 DATABASE_URL = (
     f"postgresql+asyncpg://{settings.postgres_user}:{settings.postgres_password}"
